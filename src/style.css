@@ -1,0 +1,34 @@
+/* Adapted from DeepSeek Harness StatsPills.module.css (MIT, Copyright 2026 DeepSeek).
+   Match DSH 0.2.1-rc.5 using its public theme tokens. */
+.dsh-balance-money {
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* ContextMeter is rendered after the extension slot, outside its ordering.
+     Order only our flex item after the host's default-order readings. */
+  order: 1;
+  min-width: 0;
+  font-size: calc(var(--dsh-content-font-size-secondary, 13px) - 1px);
+  line-height: calc(20px + var(--dsh-content-font-delta-secondary, 0px));
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 1px 8px;
+  border: none;
+  border-radius: var(--dsw-radius-sm);
+  background: transparent;
+  color: var(--dsw-alias-label-tertiary);
+  font-family: inherit;
+  font-weight: inherit;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dsh-balance-money:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+  color: var(--dsw-alias-label-secondary);
+}
+.dsh-balance-money:focus-visible {
+  outline: 1px solid var(--dsw-alias-label-secondary);
+  outline-offset: -1px;
+}
